@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: d571b3c60bfe7fd4ab844cab9ad2d87f
-timeCreated: 1509559833
-licenseType: Free
+guid: 281616571d26720439c5f8e03efeda88
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -176,7 +174,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rover_Model_phong4
-    second: {fileID: 2100000, guid: 0aa1cfd69da0d544d8d888f5b62314b6, type: 2}
+    second: {fileID: 2100000, guid: de7ebe1cad77bde45a4b30bb33971343, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
