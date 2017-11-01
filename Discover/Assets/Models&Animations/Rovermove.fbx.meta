@@ -31,6 +31,13 @@ ModelImporter:
     100046: Rover_Model:pCylinder7
     100048: Rover_Model:pSphere1
     100050: //RootNode
+    100052: Rover_Model:b_flap
+    100054: Rover_Model:Drill
+    100056: Rover_Model:Drillhead
+    100058: Rover_Model:flare1Handle
+    100060: Rover_Model:pCone1
+    100062: Rover_Model:pHelix1
+    100064: Rover_Model:t_flap
     400000: Rover_Model:b_arm
     400002: Rover_Model:b_leg
     400004: Rover_Model:b_wheels
@@ -57,6 +64,13 @@ ModelImporter:
     400046: Rover_Model:pCylinder7
     400048: Rover_Model:pSphere1
     400050: //RootNode
+    400052: Rover_Model:b_flap
+    400054: Rover_Model:Drill
+    400056: Rover_Model:Drillhead
+    400058: Rover_Model:flare1Handle
+    400060: Rover_Model:pCone1
+    400062: Rover_Model:pHelix1
+    400064: Rover_Model:t_flap
     2300000: Rover_Model:b_wheels
     2300002: Rover_Model:backwheel
     2300004: Rover_Model:f_wheels
@@ -78,6 +92,11 @@ ModelImporter:
     2300036: Rover_Model:pCylinder6
     2300038: Rover_Model:pCylinder7
     2300040: Rover_Model:pSphere1
+    2300042: Rover_Model:b_flap
+    2300044: Rover_Model:Drill
+    2300046: Rover_Model:pCone1
+    2300048: Rover_Model:pHelix1
+    2300050: Rover_Model:t_flap
     3300000: Rover_Model:b_wheels
     3300002: Rover_Model:backwheel
     3300004: Rover_Model:f_wheels
@@ -99,6 +118,11 @@ ModelImporter:
     3300036: Rover_Model:pCylinder6
     3300038: Rover_Model:pCylinder7
     3300040: Rover_Model:pSphere1
+    3300042: Rover_Model:b_flap
+    3300044: Rover_Model:Drill
+    3300046: Rover_Model:pCone1
+    3300048: Rover_Model:pHelix1
+    3300050: Rover_Model:t_flap
     4300000: Rover_Model:middlewheel
     4300002: Rover_Model:m_wheels
     4300004: Rover_Model:backwheel
@@ -120,6 +144,11 @@ ModelImporter:
     4300036: Rover_Model:pSphere1
     4300038: Rover_Model:pCube2
     4300040: Rover_Model:pCylinder20
+    4300042: Rover_Model:Drill
+    4300044: Rover_Model:pHelix1
+    4300046: Rover_Model:pCone1
+    4300048: Rover_Model:t_flap
+    4300050: Rover_Model:b_flap
     7400000: move
     9500000: //RootNode
   externalObjects:
@@ -143,6 +172,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Rover_Model_phong3
     second: {fileID: 2100000, guid: dcd0260225f0cef40845d6cc0899fca7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rover_Model_phong4
+    second: {fileID: 2100000, guid: de7ebe1cad77bde45a4b30bb33971343, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
