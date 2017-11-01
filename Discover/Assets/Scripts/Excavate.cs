@@ -35,11 +35,9 @@ public class Excavate : MonoBehaviour
         }
         if (ani.GetBool("Drilling") == true)
         {
-            Debug.Log("true");
-            if (ani.GetCurrentAnimatorStateInfo(0).IsName("Drilling"))
+                if (ani.GetCurrentAnimatorStateInfo(0).length > ani.GetCurrentAnimatorStateInfo(0).normalizedTime)
             {
                 ani.SetBool("Drilling", false);
-                Debug.Log("false");
             }
         }
     }
