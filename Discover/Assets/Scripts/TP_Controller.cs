@@ -5,6 +5,7 @@ using UnityEngine;
 public class TP_Controller : MonoBehaviour {
 
     public static CharacterController CharacterController;
+    public Animator ani;
     public static TP_Controller Instance;
 
     // Use this for initialization
@@ -31,7 +32,12 @@ public class TP_Controller : MonoBehaviour {
         if (Input.GetAxis("Vertical") > deadZone || Input.GetAxis("Vertical") < -deadZone)
         {
             // Add value of vertical (forward/back) to Z
+            ani.SetBool("Moving", true);
             TP_Motor.Instance.MoveVector += new Vector3(0, 0, Input.GetAxis("Vertical"));
+        } 
+        else
+        {
+            ani.SetBool("Moving", false);
         }
         if (Input.GetAxis("Horizontal") > deadZone || Input.GetAxis("Horizontal") < -deadZone)
         {
