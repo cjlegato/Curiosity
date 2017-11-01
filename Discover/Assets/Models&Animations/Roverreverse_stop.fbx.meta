@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 51b7c77b2db258c408e26f535a285ba2
+timeCreated: 1509560619
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Rover_Model:b_arm
+    100002: Rover_Model:b_flap
+    100004: Rover_Model:b_leg
+    100006: Rover_Model:b_wheels
+    100008: Rover_Model:backwheel
+    100010: Rover_Model:Drill
+    100012: Rover_Model:Drillhead
+    100014: Rover_Model:f_arm
+    100016: Rover_Model:f_wheels
+    100018: Rover_Model:flare1Handle
+    100020: Rover_Model:frontwheel
+    100022: Rover_Model:m_wheels
+    100024: Rover_Model:middlewheel
+    100026: Rover_Model:nurbsCircle2
+    100028: Rover_Model:pCone1
+    100030: Rover_Model:pCube1
+    100032: Rover_Model:pCube2
+    100034: Rover_Model:pCylinder1
+    100036: Rover_Model:pCylinder15
+    100038: Rover_Model:pCylinder16
+    100040: Rover_Model:pCylinder17
+    100042: Rover_Model:pCylinder18
+    100044: Rover_Model:pCylinder19
+    100046: Rover_Model:pCylinder20
+    100048: Rover_Model:pCylinder21
+    100050: Rover_Model:pCylinder22
+    100052: Rover_Model:pCylinder5
+    100054: Rover_Model:pCylinder6
+    100056: Rover_Model:pCylinder7
+    100058: Rover_Model:pHelix1
+    100060: Rover_Model:pSphere1
+    100062: Rover_Model:t_flap
+    100064: //RootNode
+    400000: Rover_Model:b_arm
+    400002: Rover_Model:b_flap
+    400004: Rover_Model:b_leg
+    400006: Rover_Model:b_wheels
+    400008: Rover_Model:backwheel
+    400010: Rover_Model:Drill
+    400012: Rover_Model:Drillhead
+    400014: Rover_Model:f_arm
+    400016: Rover_Model:f_wheels
+    400018: Rover_Model:flare1Handle
+    400020: Rover_Model:frontwheel
+    400022: Rover_Model:m_wheels
+    400024: Rover_Model:middlewheel
+    400026: Rover_Model:nurbsCircle2
+    400028: Rover_Model:pCone1
+    400030: Rover_Model:pCube1
+    400032: Rover_Model:pCube2
+    400034: Rover_Model:pCylinder1
+    400036: Rover_Model:pCylinder15
+    400038: Rover_Model:pCylinder16
+    400040: Rover_Model:pCylinder17
+    400042: Rover_Model:pCylinder18
+    400044: Rover_Model:pCylinder19
+    400046: Rover_Model:pCylinder20
+    400048: Rover_Model:pCylinder21
+    400050: Rover_Model:pCylinder22
+    400052: Rover_Model:pCylinder5
+    400054: Rover_Model:pCylinder6
+    400056: Rover_Model:pCylinder7
+    400058: Rover_Model:pHelix1
+    400060: Rover_Model:pSphere1
+    400062: Rover_Model:t_flap
+    400064: //RootNode
+    2300000: Rover_Model:b_flap
+    2300002: Rover_Model:b_wheels
+    2300004: Rover_Model:backwheel
+    2300006: Rover_Model:Drill
+    2300008: Rover_Model:f_wheels
+    2300010: Rover_Model:frontwheel
+    2300012: Rover_Model:m_wheels
+    2300014: Rover_Model:middlewheel
+    2300016: Rover_Model:pCone1
+    2300018: Rover_Model:pCube1
+    2300020: Rover_Model:pCube2
+    2300022: Rover_Model:pCylinder1
+    2300024: Rover_Model:pCylinder15
+    2300026: Rover_Model:pCylinder16
+    2300028: Rover_Model:pCylinder17
+    2300030: Rover_Model:pCylinder18
+    2300032: Rover_Model:pCylinder19
+    2300034: Rover_Model:pCylinder20
+    2300036: Rover_Model:pCylinder21
+    2300038: Rover_Model:pCylinder22
+    2300040: Rover_Model:pCylinder5
+    2300042: Rover_Model:pCylinder6
+    2300044: Rover_Model:pCylinder7
+    2300046: Rover_Model:pHelix1
+    2300048: Rover_Model:pSphere1
+    2300050: Rover_Model:t_flap
+    3300000: Rover_Model:b_flap
+    3300002: Rover_Model:b_wheels
+    3300004: Rover_Model:backwheel
+    3300006: Rover_Model:Drill
+    3300008: Rover_Model:f_wheels
+    3300010: Rover_Model:frontwheel
+    3300012: Rover_Model:m_wheels
+    3300014: Rover_Model:middlewheel
+    3300016: Rover_Model:pCone1
+    3300018: Rover_Model:pCube1
+    3300020: Rover_Model:pCube2
+    3300022: Rover_Model:pCylinder1
+    3300024: Rover_Model:pCylinder15
+    3300026: Rover_Model:pCylinder16
+    3300028: Rover_Model:pCylinder17
+    3300030: Rover_Model:pCylinder18
+    3300032: Rover_Model:pCylinder19
+    3300034: Rover_Model:pCylinder20
+    3300036: Rover_Model:pCylinder21
+    3300038: Rover_Model:pCylinder22
+    3300040: Rover_Model:pCylinder5
+    3300042: Rover_Model:pCylinder6
+    3300044: Rover_Model:pCylinder7
+    3300046: Rover_Model:pHelix1
+    3300048: Rover_Model:pSphere1
+    3300050: Rover_Model:t_flap
+    4300000: Rover_Model:middlewheel
+    4300002: Rover_Model:m_wheels
+    4300004: Rover_Model:backwheel
+    4300006: Rover_Model:b_wheels
+    4300008: Rover_Model:frontwheel
+    4300010: Rover_Model:f_wheels
+    4300012: Rover_Model:pCube1
+    4300014: Rover_Model:Drill
+    4300016: Rover_Model:pHelix1
+    4300018: Rover_Model:pCone1
+    4300020: Rover_Model:pCylinder1
+    4300022: Rover_Model:pCylinder6
+    4300024: Rover_Model:pCylinder7
+    4300026: Rover_Model:pCylinder15
+    4300028: Rover_Model:pCylinder18
+    4300030: Rover_Model:pCylinder21
+    4300032: Rover_Model:pCylinder22
+    4300034: Rover_Model:pCylinder5
+    4300036: Rover_Model:pCylinder17
+    4300038: Rover_Model:pCylinder16
+    4300040: Rover_Model:pCylinder19
+    4300042: Rover_Model:pSphere1
+    4300044: Rover_Model:pCube2
+    4300046: Rover_Model:pCylinder20
+    4300048: Rover_Model:t_flap
+    4300050: Rover_Model:b_flap
+    7400000: reverse_stop
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rover_Model_lambert2
+    second: {fileID: 2100000, guid: 3940b6c5915ef9c4984a68f6ed0bbe13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rover_Model_lambert3
+    second: {fileID: 2100000, guid: 2f8f0a1f401f7064a8e983112fcf813d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rover_Model_phong2
+    second: {fileID: 2100000, guid: 8d87da50aa9af4e48b5e7eb38b716e2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rover_Model_phong3
+    second: {fileID: 2100000, guid: dcd0260225f0cef40845d6cc0899fca7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rover_Model_phong4
+    second: {fileID: 2100000, guid: de7ebe1cad77bde45a4b30bb33971343, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
