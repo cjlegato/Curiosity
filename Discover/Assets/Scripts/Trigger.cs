@@ -8,12 +8,20 @@ public class Trigger : MonoBehaviour {
 	public triggerType Type;
 	public Textbox textbox;
 
+	public AnimationCurve blastoffSpeed;
+	public float blastoffTime;
+	public float maxVelocity;
+	float velocity;
+	float blastoffDuration = 0f;
+
 	//This checks if the player enters the trigger
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject.tag == "Player") {
+			StartCoroutine ("BlastOff");
 			switch (Type) {
 			case triggerType.Jump:
 				JumpTrigger ();
+				StartCoroutine ("BlastOff");
 				break;
 			case triggerType.Drill:
 				DrillTrigger ();
@@ -45,5 +53,16 @@ public class Trigger : MonoBehaviour {
 
 	void WinTrigger() {
 		textbox.SetText ("MESSAGE FROM NASA:\nCongratulations Curiosity, you have found a source of water! But your job is still not done, as there is still much more to discover on Mars. Good Luck!");
+	}
+
+	IEnumerator BlastOff() {
+		while (transform.position.y < 250f) {
+			if (blastoffDuration < blastoffTime) {
+				velocity = blastoffSpeed.Evaluate (blastoffDuration / blastoffTime) * maxVelocity;
+				blastoffDuration += Time.deltaTime;
+			}
+			this.transform.Translate (this.transform.up * velocity * Time.deltaTime);
+			yield return null;
+		}
 	}
 }

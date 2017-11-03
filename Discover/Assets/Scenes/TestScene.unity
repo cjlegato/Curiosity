@@ -431,6 +431,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   textbox: {fileID: 158928586}
+  blastoffSpeed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  blastoffTime: 5
+  maxVelocity: 10
 --- !u!136 &952023041
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1008,7 +1028,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2089671892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 477, y: 333.5, z: 0}
+  m_LocalPosition: {x: 309.5, y: 333.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1342247488}
