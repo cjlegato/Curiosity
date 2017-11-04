@@ -17,7 +17,6 @@ public class Trigger : MonoBehaviour {
 	//This checks if the player enters the trigger
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject.tag == "Player") {
-			StartCoroutine ("BlastOff");
 			switch (Type) {
 			case triggerType.Jump:
 				JumpTrigger ();
@@ -25,9 +24,11 @@ public class Trigger : MonoBehaviour {
 				break;
 			case triggerType.Drill:
 				DrillTrigger ();
+				StartCoroutine ("BlastOff");
 				break;
 			case triggerType.Radar:
 				RadarTrigger ();
+				StartCoroutine ("BlastOff");
 				break;
 			case triggerType.Win:
 				WinTrigger ();
@@ -56,6 +57,7 @@ public class Trigger : MonoBehaviour {
 	}
 
 	IEnumerator BlastOff() {
+		GetComponentInChildren<ParticleSystem> ().Play ();
 		while (transform.position.y < 250f) {
 			if (blastoffDuration < blastoffTime) {
 				velocity = blastoffSpeed.Evaluate (blastoffDuration / blastoffTime) * maxVelocity;
