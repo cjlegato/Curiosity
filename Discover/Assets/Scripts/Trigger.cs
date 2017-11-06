@@ -58,6 +58,7 @@ public class Trigger : MonoBehaviour {
 
 	IEnumerator BlastOff() {
 		GetComponentInChildren<ParticleSystem> ().Play ();
+		GetComponent<AudioSource> ().Play ();
 		while (transform.position.y < 250f) {
 			if (blastoffDuration < blastoffTime) {
 				velocity = blastoffSpeed.Evaluate (blastoffDuration / blastoffTime) * maxVelocity;
