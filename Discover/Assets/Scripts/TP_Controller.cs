@@ -34,6 +34,7 @@ public class TP_Controller : MonoBehaviour {
             // Add value of vertical (forward/back) to Z
             ani.SetBool("Moving", true);
             TP_Motor.Instance.MoveVector += new Vector3(0, 0, Input.GetAxis("Vertical"));
+            TP_Motor.Instance.vert_axis = Input.GetAxis("Vertical");
         } 
         else
         {
@@ -43,6 +44,7 @@ public class TP_Controller : MonoBehaviour {
         {
             // Add value of horizontal input (left/right) to X
             TP_Motor.Instance.MoveVector += new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+            TP_Motor.Instance.horiz_axis = Input.GetAxis("Horizontal");
         }
     }
 }
