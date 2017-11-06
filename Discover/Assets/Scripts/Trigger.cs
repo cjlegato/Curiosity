@@ -57,7 +57,9 @@ public class Trigger : MonoBehaviour {
 	}
 
 	IEnumerator BlastOff() {
-		GetComponentInChildren<ParticleSystem> ().Play ();
+		ParticleSystem[] parts = GetComponentsInChildren<ParticleSystem> ();
+		parts [0].Play ();
+		parts [1].Stop ();
 		GetComponent<AudioSource> ().Play ();
 		while (transform.position.y < 250f) {
 			if (blastoffDuration < blastoffTime) {
