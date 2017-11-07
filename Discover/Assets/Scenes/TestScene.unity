@@ -119,40 +119,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalPosition.x
       value: 22.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalPosition.y
       value: 2.6
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalPosition.z
       value: -13.6
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalRotation.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4753074813739324, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+    - target: {fileID: 4336169143145210, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1491186347767986, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
+      propertyPath: m_Name
+      value: Rover
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5c5faa60f4289d949b5f32e400ea937e, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: f033ae7db5b287e4bb108f749f667297, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &210109034 stripped
 GameObject:

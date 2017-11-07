@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 54037050224334878}
   - component: {fileID: 114010020041825984}
   m_Layer: 0
-  m_Name: Rover 1
+  m_Name: Rover_1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
