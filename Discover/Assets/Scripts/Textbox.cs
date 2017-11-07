@@ -15,10 +15,11 @@ public class Textbox : MonoBehaviour {
 	string currentString, finalString;
 	int index;
 	bool loadingText;
+	AudioSource aud;
 
 	// Use this for initialization
 	void Start () {
-		
+		aud = GetComponent<AudioSource>();
 		realText.enabled = false;
 		background.enabled = false;
 		//SetText ("This is a test text wooooooooo.");
@@ -48,6 +49,8 @@ public class Textbox : MonoBehaviour {
 				index += 1;
 				yield return new WaitForSeconds (.5f);
 			}
+			aud.pitch = Random.Range(0.7f, 1.3f);
+			aud.Play();
 			currentString = finalString.Substring (0, index + 1) + "<color=#00000000>" + finalString.Substring (index + 1) + "</color>";
 			realText.text = currentString;
 			index += 1;
