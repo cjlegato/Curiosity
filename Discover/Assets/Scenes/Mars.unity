@@ -322,7 +322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 145a7c0d7502fd94aacee8dce8ecd221, type: 3}
       propertyPath: m_Name
-      value: Rock (3)
+      value: Rock Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 145a7c0d7502fd94aacee8dce8ecd221, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
