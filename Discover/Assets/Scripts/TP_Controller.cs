@@ -20,12 +20,12 @@ public class TP_Controller : MonoBehaviour {
         {
             return; // don't update so there's no null references
         }
-        GetLocomotionInput();
+        GetMotionInput();
 
         TP_Motor.Instance.UpdateMotor(); // force motor to update
 	}
 
-    void GetLocomotionInput ()
+    void GetMotionInput ()
     {
         var deadZone = 0.1f;
         TP_Motor.Instance.MoveVector = Vector3.zero; // recalculate each frame, so zero the move vector first
