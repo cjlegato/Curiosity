@@ -16,7 +16,7 @@ public class RotateCamera360 : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         Vector3 oldPosition = new Vector3(target.position.x, target.position.y + 5, target.position.z - 5);
         transform.position = oldPosition;
         oldTargetPosition = new Vector3(target.position.x, target.position.y, target.position.z);
