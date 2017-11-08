@@ -15,35 +15,42 @@ public class TP_Controller : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (Camera.main == null) // if there is no main camera
         {
             return; // don't update so there's no null references
         }
-        GetLocomotionInput();
+        GetMotionInput();
 
         TP_Motor.Instance.UpdateMotor(); // force motor to update
 	}
 
-    void GetLocomotionInput ()
+    void GetMotionInput ()
     {
         var deadZone = 0.1f;
+        float forwardBackward = 1;
         TP_Motor.Instance.MoveVector = Vector3.zero; // recalculate each frame, so zero the move vector first
         if (Input.GetAxis("Vertical") > deadZone || Input.GetAxis("Vertical") < -deadZone)
         {
+            forwardBackward = Input.GetAxis("Vertical") / Mathf.Abs(Input.GetAxis("Vertical"));
             // Add value of vertical (forward/back) to Z
-            ani.SetBool("Moving", true);
+			if (forwardBackward == 1) {
+				ani.SetBool("Moving", true);
+			} else if (forwardBackward == -1) {
+				ani.SetBool("Reverse", true);
+			}
             TP_Motor.Instance.MoveVector += new Vector3(0, 0, Input.GetAxis("Vertical"));
             TP_Motor.Instance.vert_axis = Input.GetAxis("Vertical");
         } 
         else
         {
             ani.SetBool("Moving", false);
+			ani.SetBool("Reverse", false);
         }
         if (Input.GetAxis("Horizontal") > deadZone || Input.GetAxis("Horizontal") < -deadZone)
         {
             // Add value of horizontal input (left/right) to X
-            TP_Motor.Instance.MoveVector += new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+            TP_Motor.Instance.MoveVector += new Vector3(Input.GetAxis("Horizontal") * 2 * forwardBackward, 0, 0);
             TP_Motor.Instance.horiz_axis = Input.GetAxis("Horizontal");
         }
     }
