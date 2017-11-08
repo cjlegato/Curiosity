@@ -13,6 +13,13 @@ public class Trigger : MonoBehaviour {
 	public float maxVelocity;
 	float velocity;
 	float blastoffDuration = 0f;
+	public GameObject player;
+
+	void Start()
+	{
+		player.GetComponent<Excavate>().enabled = false;
+		player.GetComponent<Radar>().enabled = false;
+	}
 
 	//This checks if the player enters the trigger
 	void OnTriggerEnter (Collider other) {
@@ -45,10 +52,12 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void DrillTrigger() {
+		player.GetComponent<Excavate>().enabled = true;
 		textbox.SetText ("-EXTRATERRESTRIAL EXCAVATION DEVICE-\nNASA has sent you a new upgrade, giving you the ability to drill through weaker rocks.");
 	}
 
 	void RadarTrigger() {
+		player.GetComponent<Radar>().enabled = true;
 		textbox.SetText ("-DIHYDROGEN MONOXIDE RADAR SYSTEM-\nNASA has sent you a new upgrade, which will tell you your current distance from a source of water.");
 	}
 
