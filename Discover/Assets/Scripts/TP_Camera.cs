@@ -34,7 +34,7 @@ public class TP_Camera : MonoBehaviour
             if (Input.GetAxis("Mouse Y") < 0) // going down
             {
                 //    transform.RotateAround(target.position, new Vector3(1, 0, 0), Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
-                if (transform.localEulerAngles.x > 325)
+                if (transform.localEulerAngles.x > 310)
                 {
 					transform.RotateAround(target.position + Vector3.up, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
                 }
@@ -54,7 +54,7 @@ public class TP_Camera : MonoBehaviour
             else // going up, ok to do
             {
                 //    transform.RotateAround(target.position, new Vector3(1, 0, 0), Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
-                if (transform.localEulerAngles.x < 20)
+                if (transform.localEulerAngles.x < -30)
                 {
 					transform.RotateAround(target.position + Vector3.up, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
                 }
