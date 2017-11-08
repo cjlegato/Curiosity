@@ -49,7 +49,7 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void RadarTrigger() {
-		textbox.SetText ("-DIHYDROGEN MONOXIDE DETECTION SYSTEM-\nNASA has sent you a new upgrade, which will tell you your current distance from a source of water.");
+		textbox.SetText ("-DIHYDROGEN MONOXIDE RADAR SYSTEM-\nNASA has sent you a new upgrade, which will tell you your current distance from a source of water.");
 	}
 
 	void WinTrigger() {

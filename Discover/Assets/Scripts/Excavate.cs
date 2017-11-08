@@ -5,10 +5,15 @@ using UnityEngine;
 public class Excavate : MonoBehaviour
 {
     public Animator ani;
+	public GameObject particles;
+	AudioSource drill;
+	AudioSource destroy;
 
     // Use this for initialization
     void Start()
     {
+		drill = GetComponents<AudioSource>()[0];
+		destroy = GetComponents<AudioSource>()[1];
     }
 
     // Update is called once per frame
@@ -18,7 +23,8 @@ public class Excavate : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             //Play Animation
-            ani.SetBool("Drilling", true);
+			ani.Play("drill");
+			drill.Play();
             Vector3 direction = transform.TransformDirection(Vector3.forward);
             RaycastHit objecthit;
             //Ray Cast Foreward, one rock unit
@@ -29,16 +35,18 @@ public class Excavate : MonoBehaviour
                 {
                     //Play Particle effect
                     //After animation is done Destroy that thing
-                    Destroy(objecthit.transform.gameObject);
+					StartCoroutine("Break", objecthit.transform.gameObject);
                 }
             }
         }
-        if (ani.GetBool("Drilling") == true)
-        {
-                if (ani.GetCurrentAnimatorStateInfo(0).length > ani.GetCurrentAnimatorStateInfo(0).normalizedTime)
-            {
-                ani.SetBool("Drilling", false);
-            }
-        }
     }
+
+	IEnumerator Break(GameObject rock) {
+		yield return new WaitForSeconds(1f);
+		destroy.Play();
+		GameObject boom = Instantiate(particles, rock.transform.position + Vector3.up, rock.transform.rotation);
+		Destroy(rock);
+		yield return new WaitForSeconds(3f);
+		Destroy(boom);
+	}
 }
