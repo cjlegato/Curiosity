@@ -20,14 +20,7 @@ public class TP_Camera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        RaycastHit hit;
-        float distance;
-
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 20;
-        Debug.DrawRay(transform.position, forward, Color.green);
-        if (Physics.Linecast(transform.position, target.position, out hit)) {
-            print("hey");
-        }
+        
         //if (Physics.Raycast(transform.position, (forward), out hit))
         //{
         //    distance = hit.distance;
@@ -72,10 +65,20 @@ public class TP_Camera : MonoBehaviour
             Vector3.MoveTowards(transform.position, target.position, Mathf.Abs(checkDistance() - distanceFromTarget));
         }
         transform.LookAt(target);
+
+        fixCamera();
     }
 
     private float checkDistance()
     {
         return Vector3.Distance(transform.position, target.position);
+    }
+
+    void fixCamera()
+    {
+        //if (transform.localEulerAngles.x < 325 && transform.localEulerAngles.x > 20)
+        //{
+        //    transform.localEulerAngles = new Vector3(10, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        //}
     }
 }

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 12169309}
   m_Layer: 0
   m_Name: Rover Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +205,11 @@ Prefab:
       propertyPath: Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114599161594131194, guid: 144f0c29cd94b5f40943c25a329d65ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 354781576}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 144f0c29cd94b5f40943c25a329d65ce, type: 2}
   m_IsPrefabParent: 0
@@ -782,6 +787,8 @@ GameObject:
   - component: {fileID: 354781579}
   - component: {fileID: 354781578}
   - component: {fileID: 354781577}
+  - component: {fileID: 354781584}
+  - component: {fileID: 354781585}
   m_Layer: 0
   m_Name: Rover_New
   m_TagString: Player
@@ -841,7 +848,7 @@ BoxCollider:
   m_GameObject: {fileID: 354781576}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.57, y: 0.37, z: 1.76}
   m_Center: {x: -0, y: 0.73, z: -0.03}
@@ -901,6 +908,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1530716219}
+--- !u!114 &354781584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354781576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5a641b3a91a284f95665546bb039dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objToFind: {fileID: 1389527525}
+  radarText: {fileID: 1164908949}
+--- !u!114 &354781585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 354781576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49305a64dab68904a84da603f06ff4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ani: {fileID: 1530716219}
+  jumpforce: 2500000
 --- !u!1 &357939355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1883,11 @@ Prefab:
       propertyPath: Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114599161594131194, guid: 144f0c29cd94b5f40943c25a329d65ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 354781576}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 144f0c29cd94b5f40943c25a329d65ce, type: 2}
   m_IsPrefabParent: 0
@@ -2071,7 +2109,7 @@ GameObject:
   - component: {fileID: 947733854}
   m_Layer: 0
   m_Name: Wheel Colliders
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2699,6 +2737,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1007305726577820, guid: d0c70edb8a55bc348b41ba00b9f82420,
     type: 2}
   m_PrefabInternal: {fileID: 913106195}
+--- !u!114 &1258328232 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114454172261423438, guid: d0c70edb8a55bc348b41ba00b9f82420,
+    type: 2}
+  m_PrefabInternal: {fileID: 913106195}
+  m_Script: {fileID: 11500000, guid: c4ffbad715e0c004ea9f57d998adba83, type: 3}
 --- !u!1 &1288538525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +2774,11 @@ Transform:
   m_Father: {fileID: 1215565586}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1389527525 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4862618878915958, guid: 9f10518d3f2da494590fb42efd9c3599,
+    type: 2}
+  m_PrefabInternal: {fileID: 1451569377}
 --- !u!1 &1418510097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,7 +3017,7 @@ GameObject:
   - component: {fileID: 1530716219}
   m_Layer: 0
   m_Name: RoverModel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3249,6 +3298,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1613752855}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1621064654 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114218524555090000, guid: d0c70edb8a55bc348b41ba00b9f82420,
+    type: 2}
+  m_PrefabInternal: {fileID: 913106195}
+  m_Script: {fileID: 11500000, guid: fb4b833234c8e6242ba465b0cfb8e461, type: 3}
 --- !u!1 &1653901214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,6 +3528,11 @@ Prefab:
       propertyPath: textbox
       value: 
       objectReference: {fileID: 557489697}
+    - target: {fileID: 114599161594131194, guid: 144f0c29cd94b5f40943c25a329d65ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 354781576}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 144f0c29cd94b5f40943c25a329d65ce, type: 2}
   m_IsPrefabParent: 0
@@ -3901,6 +3961,16 @@ Prefab:
       propertyPath: spreadCustomCurve.m_RotationOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114052123364158608, guid: 5bf8cbc9a4b0b6c479b254d9deeb1eef,
+        type: 2}
+      propertyPath: rotator
+      value: 
+      objectReference: {fileID: 1621064654}
+    - target: {fileID: 114052123364158608, guid: 5bf8cbc9a4b0b6c479b254d9deeb1eef,
+        type: 2}
+      propertyPath: alsoRotator
+      value: 
+      objectReference: {fileID: 1258328232}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5bf8cbc9a4b0b6c479b254d9deeb1eef, type: 2}
   m_IsPrefabParent: 0
