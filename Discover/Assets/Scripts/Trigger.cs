@@ -63,6 +63,7 @@ public class Trigger : MonoBehaviour {
 	}
 
 	void WinTrigger() {
+		player.GetComponent<Radar>().enabled = false;
 		textbox.SetText ("MESSAGE FROM NASA:\nCongratulations Curiosity, you have found a source of water! But your job is still not done, as there is still much more to discover on Mars. Good Luck!");
 		Destroy (this);
 	}

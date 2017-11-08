@@ -20,6 +20,10 @@ public class TitleScreen : MonoBehaviour {
 			}
 			textBox.SetText("MESSAGE FROM NASA:\nHi Curiosity, we sent you some upgrades to help you in your search for water. They landed nearby, go grab them!");
 		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) {
+			Application.Quit();
+		}
 	}
 
 	IEnumerator Fade(GameObject obj) {
