@@ -795,7 +795,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164908947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -390, y: 200.21416, z: 0}
+  m_LocalPosition: {x: -390.00003, y: 185.86508, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 938730310}
@@ -1177,7 +1177,7 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
   m_DrawHeightmap: 1
-  m_DrawTreesAndFoliage: 1
+  m_DrawTreesAndFoliage: 0
   m_ReflectionProbeUsage: 1
   m_MaterialType: 0
   m_LegacySpecular:
@@ -1722,12 +1722,12 @@ Prefab:
     - target: {fileID: 224734638153927654, guid: 5bf8cbc9a4b0b6c479b254d9deeb1eef,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 607
+      value: 459.5
       objectReference: {fileID: 0}
     - target: {fileID: 224734638153927654, guid: 5bf8cbc9a4b0b6c479b254d9deeb1eef,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 319
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224734638153927654, guid: 5bf8cbc9a4b0b6c479b254d9deeb1eef,
         type: 2}
