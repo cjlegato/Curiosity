@@ -5,13 +5,20 @@ using UnityEngine;
 public class TP_Motor : MonoBehaviour {
 
     public static TP_Motor Instance;
-    public float MoveSpeed = 10f;
+    public float MoveSpeed = 0.00000000001f;
     public Vector3 MoveVector { get; set; }
+    public Rigidbody robotRigidBody;
+    public float vert_axis;
+    public float horiz_axis;
 
-	// Use this for initialization
-	void Awake () {
+
+    // Use this for initialization
+    void Awake () {
         Instance = this;
-	}
+        // idea reference : https://forum.unity.com/threads/how-to-prevent-the-car-from-tilting-flipping-or-constrain-it-to-x-z-axes.76488/
+        robotRigidBody = GetComponent<Rigidbody>(); // get the reference to the rigid body
+        robotRigidBody.centerOfMass = new Vector3(0, -2, 0);
+    }
 	
 	// Update is called once per frame
 	public void UpdateMotor() {
@@ -29,7 +36,13 @@ public class TP_Motor : MonoBehaviour {
         }
         MoveVector *= MoveSpeed; // increase magnitude by speed
         MoveVector *= Time.deltaTime; // spread out over seconds
-        TP_Controller.CharacterController.Move(MoveVector); // send back to the controller to make it move
+
+        if (MoveVector != Vector3.zero)
+        {
+            robotRigidBody.MovePosition(robotRigidBody.position + MoveVector);
+        }
+        
+        //TP_Controller.CharacterController.Move(MoveVector); // send back to the controller to make it move
     }
 
     void SnapAlignCharacterWithCamera()
