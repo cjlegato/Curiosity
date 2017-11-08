@@ -12,6 +12,7 @@ public class TP_Controller : MonoBehaviour {
 	bool moving = false;
     // Use this for initialization
     void Awake () {
+		Cursor.visible = false;
         CharacterController = GetComponent<CharacterController>(); // get the character controller component
         Instance = this; // store a reference to this controller class
 		aud = GetComponents<AudioSource>()[4];
