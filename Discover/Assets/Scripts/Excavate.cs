@@ -5,10 +5,12 @@ using UnityEngine;
 public class Excavate : MonoBehaviour
 {
     public Animator ani;
+	AudioSource aud;
 
     // Use this for initialization
     void Start()
     {
+		aud = GetComponents<AudioSource>()[0];
     }
 
     // Update is called once per frame
@@ -18,7 +20,8 @@ public class Excavate : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             //Play Animation
-            ani.SetBool("Drilling", true);
+			ani.Play("drill");
+			aud.Play();
             Vector3 direction = transform.TransformDirection(Vector3.forward);
             RaycastHit objecthit;
             //Ray Cast Foreward, one rock unit
@@ -31,13 +34,6 @@ public class Excavate : MonoBehaviour
                     //After animation is done Destroy that thing
                     Destroy(objecthit.transform.gameObject);
                 }
-            }
-        }
-        if (ani.GetBool("Drilling") == true)
-        {
-                if (ani.GetCurrentAnimatorStateInfo(0).length > ani.GetCurrentAnimatorStateInfo(0).normalizedTime)
-            {
-                ani.SetBool("Drilling", false);
             }
         }
     }
