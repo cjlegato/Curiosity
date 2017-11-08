@@ -19,6 +19,7 @@ public class Trigger : MonoBehaviour {
 	{
 		player.GetComponent<Excavate>().enabled = false;
 		player.GetComponent<Radar>().enabled = false;
+        player.GetComponent<Jumping>().enabled = false;
 	}
 
 	//This checks if the player enters the trigger
@@ -48,7 +49,8 @@ public class Trigger : MonoBehaviour {
 	// a bool somewhere probably
 
 	void JumpTrigger() {
-		textbox.SetText ("-HYDRAULIC BOOSTER-\nNASA has sent you a new upgrade, allowing you to jump.");
+        player.GetComponent<Jumping>().enabled = true;
+        textbox.SetText ("-HYDRAULIC BOOSTER-\nNASA has sent you a new upgrade, allowing you to jump.");
 	}
 
 	void DrillTrigger() {
