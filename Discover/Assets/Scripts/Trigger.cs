@@ -49,12 +49,12 @@ public class Trigger : MonoBehaviour {
 
 	void JumpTrigger() {
         player.GetComponent<Jumping>().canJump = true;
-        textbox.SetText ("-HYDRAULIC BOOSTER-\nNASA has sent you a new upgrade, allowing you to jump.");
+		textbox.SetText ("-HYDRAULIC BOOSTER-\nNASA has sent you a new upgrade, allowing you to jump.\n(Press Spacebar)");
 	}
 
 	void DrillTrigger() {
 		player.GetComponent<Excavate>().enabled = true;
-		textbox.SetText ("-EXTRATERRESTRIAL EXCAVATION DEVICE-\nNASA has sent you a new upgrade, giving you the ability to drill through weaker rocks.");
+		textbox.SetText ("-EXTRATERRESTRIAL EXCAVATION DEVICE-\nNASA has sent you a new upgrade, giving you the ability to drill through weaker rocks.\n(Press E)");
 	}
 
 	void RadarTrigger() {
@@ -64,6 +64,7 @@ public class Trigger : MonoBehaviour {
 
 	void WinTrigger() {
 		textbox.SetText ("MESSAGE FROM NASA:\nCongratulations Curiosity, you have found a source of water! But your job is still not done, as there is still much more to discover on Mars. Good Luck!");
+		Destroy (this);
 	}
 
 	IEnumerator BlastOff() {
