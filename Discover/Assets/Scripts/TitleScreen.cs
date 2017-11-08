@@ -10,12 +10,15 @@ public class TitleScreen : MonoBehaviour {
 	public GameObject camera;
 	public float rotateSpeed;
 	public float fadeTime;
+	public RotateCamera360 rotator;
+	public TP_Camera alsoRotator;
 
 	bool titleScreen = true;
 
 	// Use this for initialization
 	void Start () {
-		
+		rotator.enabled = false;
+		alsoRotator.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +27,9 @@ public class TitleScreen : MonoBehaviour {
 			camera.transform.RotateAround(player.position, Vector3.up, rotateSpeed * Time.deltaTime);
 		}
 
-		if (Input.anyKey) {
+		if (Input.anyKey && titleScreen) {
+			alsoRotator.enabled = true;
+			rotator.enabled = true;
 			titleScreen = false;
 			foreach(GameObject obj in titleScreenObjects) {
 				StartCoroutine("Fade", obj);
