@@ -25,6 +25,7 @@ public class TP_Motor : MonoBehaviour {
         SnapAlignCharacterWithCamera();
         ProcessMotion();
 
+
     }
 
     void ProcessMotion()
