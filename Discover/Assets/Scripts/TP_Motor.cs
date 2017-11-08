@@ -47,6 +47,7 @@ public class TP_Motor : MonoBehaviour {
 
     void SnapAlignCharacterWithCamera()
     {
+        Vector3 levelVector = Vector3.ProjectOnPlane(transform.TransformDirection(Vector3.forward), new Vector3(1, 0, 1));
         float x_val = MoveVector.x;
         MoveVector -= new Vector3(MoveVector.x, 0, 0);
         if (x_val != 0 && MoveVector.z >= 0) // if we are moving
@@ -57,5 +58,8 @@ public class TP_Motor : MonoBehaviour {
         {
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y - x_val, transform.eulerAngles.z); // rotate the player with the camera
         }
+
+        robotRigidBody.AddForce(transform.TransformDirection(Vector3.forward) - levelVector);
+
     }
 }
