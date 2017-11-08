@@ -11,7 +11,7 @@ public class Jumping : MonoBehaviour
     AudioSource jump;
     AudioSource fall;
     bool falling;
-
+    public bool canJump = false;
 
     // Use this for initialization
     void Start()
@@ -28,13 +28,15 @@ public class Jumping : MonoBehaviour
     {
         if(rb.velocity.y < -1.0f && isGrounded == false)
         {
+            //Play falling animation
+            ani.Play("fall");
             falling = true;
         }
         else
         {
             falling = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && canJump)
         {
             //Add some Vertical Velocity
             float x = rb.velocity.x;
@@ -44,18 +46,14 @@ public class Jumping : MonoBehaviour
             jump.Play();
             isGrounded = false;
             //Play jump animation
-            //ani.SetBool("JumpingUP", true);
-            //At top play fall animation
-            //ani.SetBool("JumpingUP", false);
-            //ani.SetBool("JumpingDOWN", true);
-            //At bottom play hit animation
-            //ani.SetBool("JumpingDOWN", false);
-            //ani.SetBool("hitground", true);
+            ani.Play("jump");
         }
         isGrounded = isonGround(rb);
         if(isGrounded && falling)
         {
             fall.Play();
+            ani.Play("land");
+            //Play landing animation
         }
     }
 
