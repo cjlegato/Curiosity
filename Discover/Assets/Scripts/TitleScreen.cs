@@ -6,34 +6,19 @@ using UnityEngine.UI;
 public class TitleScreen : MonoBehaviour {
 
 	public GameObject[] titleScreenObjects;
-	public Transform player;
-	public GameObject camera;
-	public float rotateSpeed;
 	public float fadeTime;
-	public RotateCamera360 rotator;
-	public TP_Camera alsoRotator;
-
+	public Textbox textBox;
 	bool titleScreen = true;
-
-	// Use this for initialization
-	void Start () {
-		rotator.enabled = false;
-		alsoRotator.enabled = false;
-	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (titleScreen) {
-			camera.transform.RotateAround(player.position, Vector3.up, rotateSpeed * Time.deltaTime);
-		}
 
 		if (Input.anyKey && titleScreen) {
-			alsoRotator.enabled = true;
-			rotator.enabled = true;
 			titleScreen = false;
 			foreach(GameObject obj in titleScreenObjects) {
 				StartCoroutine("Fade", obj);
 			}
+			textBox.SetText("MESSAGE FROM NASA:\nHi Curiosity, we sent you some upgrades to help you in your search for water. They landed nearby, go grab them!");
 		}
 	}
 
