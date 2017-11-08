@@ -7,19 +7,28 @@ using UnityEngine;
 public class TP_Camera : MonoBehaviour
 {
     public Transform target;
+    public float distanceFromTarget;
 
 
     // Use this for initialization
     void Awake()
     {
-        
+        distanceFromTarget = Vector3.Distance(transform.position, target.position);
     }
 
 
     // Update is called once per frame
     void LateUpdate()
     {
+        
+        //if (Physics.Raycast(transform.position, (forward), out hit))
+        //{
+        //    distance = hit.distance;
+        //    print(distance + " " + hit.collider.gameObject.name);
+        //}
+
         // 325 - 20
+        //Debug.Log(transform.localEulerAngles);
         if (transform.localEulerAngles.x > 270) // 325 - 360
         {
             if (Input.GetAxis("Mouse Y") < 0) // going down
@@ -51,5 +60,25 @@ public class TP_Camera : MonoBehaviour
                 }
             }
         }
+        if (checkDistance() != distanceFromTarget)
+        {
+            Vector3.MoveTowards(transform.position, target.position, Mathf.Abs(checkDistance() - distanceFromTarget));
+        }
+        transform.LookAt(target);
+
+        fixCamera();
+    }
+
+    private float checkDistance()
+    {
+        return Vector3.Distance(transform.position, target.position);
+    }
+
+    void fixCamera()
+    {
+        //if (transform.localEulerAngles.x < 325 && transform.localEulerAngles.x > 20)
+        //{
+        //    transform.localEulerAngles = new Vector3(10, transform.localEulerAngles.y, transform.localEulerAngles.z);
+        //}
     }
 }
