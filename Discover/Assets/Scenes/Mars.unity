@@ -403,7 +403,7 @@ MonoBehaviour:
     m_RotationOrder: 0
   blastoffTime: 5
   maxVelocity: 10
-  player: {fileID: 0}
+  player: {fileID: 1600295902}
 --- !u!136 &399036398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -990,6 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 732386827}
+  distanceFromTarget: 0
 --- !u!45 &1258328233
 Skybox:
   m_ObjectHideFlags: 0
