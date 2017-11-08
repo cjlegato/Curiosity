@@ -19,7 +19,7 @@ public class Trigger : MonoBehaviour {
 	{
 		player.GetComponent<Excavate>().enabled = false;
 		player.GetComponent<Radar>().enabled = false;
-        player.GetComponent<Jumping>().enabled = false;
+        //player.GetComponent<Jumping>().enabled = false;
 	}
 
 	//This checks if the player enters the trigger
