@@ -34,13 +34,18 @@ public class TP_Controller : MonoBehaviour {
         {
             forwardBackward = Input.GetAxis("Vertical") / Mathf.Abs(Input.GetAxis("Vertical"));
             // Add value of vertical (forward/back) to Z
-            ani.SetBool("Moving", true);
+			if (forwardBackward == 1) {
+				ani.SetBool("Moving", true);
+			} else if (forwardBackward == -1) {
+				ani.SetBool("Reverse", true);
+			}
             TP_Motor.Instance.MoveVector += new Vector3(0, 0, Input.GetAxis("Vertical"));
             TP_Motor.Instance.vert_axis = Input.GetAxis("Vertical");
         } 
         else
         {
             ani.SetBool("Moving", false);
+			ani.SetBool("Reverse", false);
         }
         if (Input.GetAxis("Horizontal") > deadZone || Input.GetAxis("Horizontal") < -deadZone)
         {
