@@ -10,6 +10,8 @@ public class Jumping : MonoBehaviour
     Rigidbody rb;
     AudioSource jump;
     AudioSource fall;
+	bool rising = false;
+	float jumptime;
     bool falling;
     public bool canJump = false;
 
@@ -31,6 +33,7 @@ public class Jumping : MonoBehaviour
             //Play falling animation
             ani.Play("fall");
             falling = true;
+			rising = false;
         }
         else
         {
@@ -47,6 +50,8 @@ public class Jumping : MonoBehaviour
             isGrounded = false;
             //Play jump animation
             ani.Play("jump");
+			rising = true;
+			jumptime = Time.time;
         }
         isGrounded = isonGround(rb);
         if(isGrounded && falling)
@@ -55,6 +60,11 @@ public class Jumping : MonoBehaviour
             ani.Play("land");
             //Play landing animation
         }
+		if (isGrounded && rising && (Time.time - jumptime > 0.5f)) {
+			fall.Play();
+			ani.Play("land");
+			rising = false;
+		}
     }
 
     bool isonGround(Rigidbody rb)

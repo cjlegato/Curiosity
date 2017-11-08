@@ -13,7 +13,7 @@ public class TP_Camera : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        distanceFromTarget = Vector3.Distance(transform.position, target.position);
+		distanceFromTarget = Vector3.Distance(transform.position, target.position + Vector3.up);
     }
 
 
@@ -34,14 +34,14 @@ public class TP_Camera : MonoBehaviour
             if (Input.GetAxis("Mouse Y") < 0) // going down
             {
                 //    transform.RotateAround(target.position, new Vector3(1, 0, 0), Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
-                if (transform.localEulerAngles.x > 325)
+                if (transform.localEulerAngles.x > 310)
                 {
-                    transform.RotateAround(target.position, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
+					transform.RotateAround(target.position + Vector3.up, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
                 }
             }
             else // going up
             {
-                transform.RotateAround(target.position, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
+				transform.RotateAround(target.position + Vector3.up, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
             }
         }
 
@@ -49,20 +49,20 @@ public class TP_Camera : MonoBehaviour
         {
             if (Input.GetAxis("Mouse Y") < 0)
             {
-                transform.RotateAround(target.position, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
+				transform.RotateAround(target.position + Vector3.up, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
             }
             else // going up, ok to do
             {
                 //    transform.RotateAround(target.position, new Vector3(1, 0, 0), Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
-                if (transform.localEulerAngles.x < 20)
+                if (transform.localEulerAngles.x < -30)
                 {
-                    transform.RotateAround(target.position, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
+					transform.RotateAround(target.position + Vector3.up, transform.right, Input.GetAxis("Mouse Y") * 150 * Time.deltaTime);
                 }
             }
         }
         if (checkDistance() != distanceFromTarget)
         {
-            Vector3.MoveTowards(transform.position, target.position, Mathf.Abs(checkDistance() - distanceFromTarget));
+			Vector3.MoveTowards(transform.position, target.position + Vector3.up, Mathf.Abs(checkDistance() - distanceFromTarget));
         }
         transform.LookAt(target);
 
@@ -71,7 +71,7 @@ public class TP_Camera : MonoBehaviour
 
     private float checkDistance()
     {
-        return Vector3.Distance(transform.position, target.position);
+		return Vector3.Distance(transform.position, target.position + Vector3.up);
     }
 
     void fixCamera()
