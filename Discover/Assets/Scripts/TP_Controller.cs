@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿// Reference for elements of movement controls: https://www.3dbuzz.com/training/view/3rd-person-character-system/simple-character-system
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
